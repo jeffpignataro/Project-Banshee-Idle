@@ -406,7 +406,7 @@ public partial class MainController : Control
             ["combat_stats"] = SerializeCombatStats()
         };
 
-        var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Write);
+        var file = Godot.FileAccess.Open("user://savegame.json", Godot.FileAccess.ModeFlags.Write);
         if (file != null)
         {
             file.StoreString(Json.Stringify(saveData));
@@ -417,9 +417,9 @@ public partial class MainController : Control
 
     private void LoadGame()
     {
-        if (FileAccess.FileExists("user://savegame.json"))
+        if (Godot.FileAccess.FileExists("user://savegame.json"))
         {
-            var file = FileAccess.Open("user://savegame.json", FileAccess.ModeFlags.Read);
+            var file = Godot.FileAccess.Open("user://savegame.json", Godot.FileAccess.ModeFlags.Read);
             if (file != null)
             {
                 var json = new Json();

@@ -19,6 +19,7 @@
 - [x] Progress Bars & Visual Feedback.
 
 ## Phase 4: Expansion
-- [ ] Combat System (HP, Monsters, Loot).
-- [ ] Crafting Skills (Smithing, Fletching).
-- [ ] Equipment System.
+- [x] Combat System (HP, Monsters, Loot).
+- [x] Crafting Skills (Smithing, Fletching).
+- [x] Equipment System.
+- [x] Godot Project Integration & Build Check.
