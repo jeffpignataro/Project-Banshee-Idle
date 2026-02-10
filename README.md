@@ -1,43 +1,49 @@
 # Project Banshee-Idle
 
-A deep, polished incremental RPG built with C# and Godot (CLI-version for now). Inspired by *Melvor Idle* and *RuneScape*.
+A deep, polished incremental RPG built with C# and Godot 4.3. Inspired by *Melvor Idle* and *RuneScape*.
 
 ## Features (Current)
+- **Godot 4 GUI:** Modern sidebar navigation and real-time progress bars.
 - **Woodcutting:** Chop trees from normal to Magic.
 - **Mining:** Mine ores from Copper to Runite.
+- **Combat System:** Fight monsters (Goblins, Skeletons, Dragons) with proper HP and loot tables.
+- **Crafting & Equipment:** Smithing, Fletching, and 9 equipment slots with stat bonuses.
 - **Exponential Leveling:** Proper RuneScape-style XP curves.
 - **Inventory/Bank:** Manage your loot and stash items.
-- **Save/Load:** JSON-based persistence.
-- **Console Interface:** Functional game loop for testing logic.
+- **Save/Load:** JSON-based persistence (saved to `user://savegame.json`).
 
 ## Prerequisites
+- **Godot 4.3 (Mono/C# version)** installed.
 - **.NET 8.0 SDK** or later.
 
 ## How to Build & Run
 
-### 1. Build the project
+### 1. Build the solutions
 Open your terminal in the `BansheeIdle` directory and run:
 ```bash
-dotnet build
+/snap/bin/godot-4 --headless --path . --build-solutions --quit
 ```
+*(Or use your local Godot binary path)*
 
 ### 2. Run the game
-To start the console-based game loop:
+Open the project in Godot 4.3 and press **F5**, or run:
 ```bash
-dotnet run
+/snap/bin/godot-4 --path .
 ```
 
-## Game Controls (CLI)
-- Use numbers **1-8** to navigate menus.
-- When performing a skill action (gathering), press **Enter** at any time to stop and return to the menu.
-- Your progress is saved to `savegame.json` when you select the save or quit options.
+## Game Controls
+- Use the **Sidebar** to navigate between Skills, Combat, Equipment, Inventory, and the Bank.
+- Click on an action (e.g., "Normal Tree") to start gathering.
+- The **Combat** view allows you to fight monsters for XP and loot.
+- **Equipment** lets you equip weapons and armor from your inventory.
+- Your progress is saved automatically when you click the **Save** button.
 
 ## Project Structure
-- `Core/`: The engine guts (Skills, Inventory, Data Structures).
-- `Data/`: JSON database of items and actions.
-- `GUI/`: Blueprints for the upcoming Godot interface.
-- `Program.cs`: The console-based game loop for testing.
+- `Core/`: The engine guts (Combat, Crafting, Skills, Inventory, Data Structures).
+- `Data/`: JSON database of items, monsters, and actions.
+- `scenes/`: Godot UI scenes (Main interface).
+- `scripts/`: C# controllers and bridge scripts for Godot.
+- `Program.cs`: Legacy console game loop (deprecated).
 
-## Next Steps
-- **Phase 3:** Implementing the Godot GUI.
-- **Phase 4:** Combat systems and equipment.
+## Status
+- **Phase 1-4:** Complete. The core game loop, GUI, Combat, and Crafting systems are fully implemented.
