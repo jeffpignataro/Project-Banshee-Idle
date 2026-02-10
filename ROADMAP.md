@@ -1,16 +1,17 @@
 # Project Banshee-Idle: High-Level Roadmap
 
-## Phase 1: Foundation (Current)
-- [ ] Define Core Data Structures (C#).
-- [ ] Implement Modular Skill Action Pattern.
-- [ ] Design GUI Framework Layout.
-- [ ] Establish Data Registry (JSON/CSV).
+## Phase 1: Foundation
+- [x] Define Core Data Structures (C#).
+- [x] Implement Modular Skill Action Pattern.
+- [x] Design GUI Framework Layout.
+- [x] Establish Data Registry (JSON/CSV).
 
 ## Phase 2: Core Loop & Mechanics
-- [ ] Woodcutting & Mining Implementation (First Actions).
-- [ ] Inventory & Bank Management Logic.
-- [ ] Experience & Leveling Calculations.
-- [ ] Save/Load System (JSON Serialization).
+- [x] Woodcutting & Mining Implementation (First Actions).
+- [x] Inventory & Bank Management Logic.
+- [x] Experience & Leveling Calculations.
+- [x] Save/Load System (JSON Serialization).
+- [x] Console Game Loop for Testing.
 
 ## Phase 3: GUI & Polish
 - [ ] Godot Scene Setup (Main Menu, Sidebar, Skill Views).

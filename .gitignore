@@ -1,0 +1,5 @@
+bin/
+obj/
+savegame.json
+*.user
+.vs/

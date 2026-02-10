@@ -1,13 +1,38 @@
 {
   "items": [
     { "id": "logs", "name": "Logs", "value": 1 },
-    { "id": "copper_ore", "name": "Copper Ore", "value": 2 }
+    { "id": "oak_logs", "name": "Oak Logs", "value": 4 },
+    { "id": "willow_logs", "name": "Willow Logs", "value": 8 },
+    { "id": "maple_logs", "name": "Maple Logs", "value": 20 },
+    { "id": "yew_logs", "name": "Yew Logs", "value": 60 },
+    { "id": "magic_logs", "name": "Magic Logs", "value": 150 },
+
+    { "id": "copper_ore", "name": "Copper Ore", "value": 2 },
+    { "id": "tin_ore", "name": "Tin Ore", "value": 2 },
+    { "id": "iron_ore", "name": "Iron Ore", "value": 12 },
+    { "id": "coal", "name": "Coal", "value": 30 },
+    { "id": "mithril_ore", "name": "Mithril Ore", "value": 75 },
+    { "id": "adamant_ore", "name": "Adamantite Ore", "value": 200 },
+    { "id": "rune_ore", "name": "Runite Ore", "value": 500 }
   ],
   "skills": [
     { "id": "woodcutting", "name": "Woodcutting" },
     { "id": "mining", "name": "Mining" }
   ],
   "actions": [
-    { "id": "wc_tree", "skill": "woodcutting", "req_level": 1, "xp": 10, "loot": "logs" }
+    { "id": "wc_tree", "skill": "woodcutting", "req_level": 1, "xp": 25, "loot": "logs", "time": 3.0 },
+    { "id": "wc_oak", "skill": "woodcutting", "req_level": 15, "xp": 37, "loot": "oak_logs", "time": 4.0 },
+    { "id": "wc_willow", "skill": "woodcutting", "req_level": 30, "xp": 67, "loot": "willow_logs", "time": 4.5 },
+    { "id": "wc_maple", "skill": "woodcutting", "req_level": 45, "xp": 100, "loot": "maple_logs", "time": 5.0 },
+    { "id": "wc_yew", "skill": "woodcutting", "req_level": 60, "xp": 175, "loot": "yew_logs", "time": 6.0 },
+    { "id": "wc_magic", "skill": "woodcutting", "req_level": 75, "xp": 250, "loot": "magic_logs", "time": 8.0 },
+
+    { "id": "mine_copper", "skill": "mining", "req_level": 1, "xp": 17, "loot": "copper_ore", "time": 2.5 },
+    { "id": "mine_tin", "skill": "mining", "req_level": 1, "xp": 17, "loot": "tin_ore", "time": 2.5 },
+    { "id": "mine_iron", "skill": "mining", "req_level": 15, "xp": 35, "loot": "iron_ore", "time": 3.5 },
+    { "id": "mine_coal", "skill": "mining", "req_level": 30, "xp": 50, "loot": "coal", "time": 4.0 },
+    { "id": "mine_mithril", "skill": "mining", "req_level": 55, "xp": 80, "loot": "mithril_ore", "time": 5.5 },
+    { "id": "mine_adamant", "skill": "mining", "req_level": 70, "xp": 95, "loot": "adamant_ore", "time": 7.0 },
+    { "id": "mine_rune", "skill": "mining", "req_level": 85, "xp": 125, "loot": "rune_ore", "time": 9.0 }
   ]
 }
