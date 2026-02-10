@@ -14,9 +14,9 @@
 - [x] Console Game Loop for Testing.
 
 ## Phase 3: GUI & Polish
-- [ ] Godot Scene Setup (Main Menu, Sidebar, Skill Views).
-- [ ] Dynamic Inventory UI.
-- [ ] Progress Bars & Visual Feedback.
+- [x] Godot Scene Setup (Main Menu, Sidebar, Skill Views).
+- [x] Dynamic Inventory UI.
+- [x] Progress Bars & Visual Feedback.
 
 ## Phase 4: Expansion
 - [ ] Combat System (HP, Monsters, Loot).

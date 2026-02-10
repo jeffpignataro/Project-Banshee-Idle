@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/MainController.cs" id="1_main"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_main")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sidebar" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Banshee Idle"
+horizontal_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+
+[node name="SkillsLabel" type="Label" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Skills"
+horizontal_alignment = 1
+
+[node name="WoodcuttingBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Woodcutting"
+
+[node name="MiningBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Mining"
+
+[node name="Separator2" type="HSeparator" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+
+[node name="InventoryBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="BankBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Bank"
+
+[node name="Separator3" type="HSeparator" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+
+[node name="SaveBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Save Game"
+
+[node name="MainPanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MainPanel"]
+layout_mode = 2
+
+[node name="SkillTitle" type="Label" parent="HBoxContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Select a Skill"
+horizontal_alignment = 1
+
+[node name="SkillLevel" type="Label" parent="HBoxContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Level: 1 | XP: 0"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/MainPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+value = 0.0
+
+[node name="ActionGrid" type="GridContainer" parent="HBoxContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 4
+
+[node name="StatusLabel" type="Label" parent="HBoxContainer/MainPanel/VBoxContainer"]
+layout_mode = 2
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="InventoryPanel" type="PanelContainer" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="InventoryList" type="ItemList" parent="HBoxContainer/InventoryPanel"]
+layout_mode = 2
