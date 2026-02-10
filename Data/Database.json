@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "id": "logs", "name": "Logs", "value": 1 },
+    { "id": "copper_ore", "name": "Copper Ore", "value": 2 }
+  ],
+  "skills": [
+    { "id": "woodcutting", "name": "Woodcutting" },
+    { "id": "mining", "name": "Mining" }
+  ],
+  "actions": [
+    { "id": "wc_tree", "skill": "woodcutting", "req_level": 1, "xp": 10, "loot": "logs" }
+  ]
+}
