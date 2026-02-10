@@ -1,11 +1,8 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text.Json;
 using BansheeIdle.Core;
-
-namespace BansheeIdle.GUI;
 
 public partial class MainController : Control
 {
@@ -119,10 +116,11 @@ public partial class MainController : Control
 
     private void LoadDatabase()
     {
-        string dbPath = ProjectSettings.GlobalizePath("res://Data/Database.json");
-        if (File.Exists(dbPath))
+        string dbPath = "res://Data/Database.json";
+        if (Godot.FileAccess.FileExists(dbPath))
         {
-            string json = File.ReadAllText(dbPath);
+            using var file = Godot.FileAccess.Open(dbPath, Godot.FileAccess.ModeFlags.Read);
+            string json = file.GetAsText();
             _database = JsonSerializer.Deserialize<GameDatabase>(json);
         }
         else
