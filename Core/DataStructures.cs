@@ -53,6 +53,7 @@ public class GameState
     public Dictionary<string, SkillData> Skills { get; set; } = new();
     public List<InventoryItem> Inventory { get; set; } = new();
     public List<InventoryItem> Bank { get; set; } = new();
+    public EquippedItems Equipment { get; set; } = new();
 
     public void EnsureSkill(string id, string name)
     {
@@ -105,6 +106,87 @@ public class ActionDef
     public float Time { get; set; } = 3.0f;
 }
 
+public class RecipeIngredient
+{
+    [JsonPropertyName("item_id")]
+    public string ItemId { get; set; } = "";
+
+    [JsonPropertyName("quantity")]
+    public int Quantity { get; set; } = 1;
+}
+
+public class RecipeDef
+{
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = "";
+
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
+
+    [JsonPropertyName("skill")]
+    public string Skill { get; set; } = "";
+
+    [JsonPropertyName("req_level")]
+    public int ReqLevel { get; set; }
+
+    [JsonPropertyName("xp")]
+    public int Xp { get; set; }
+
+    [JsonPropertyName("time")]
+    public float Time { get; set; } = 3.0f;
+
+    [JsonPropertyName("output_item")]
+    public string OutputItem { get; set; } = "";
+
+    [JsonPropertyName("output_quantity")]
+    public int OutputQuantity { get; set; } = 1;
+
+    [JsonPropertyName("ingredients")]
+    public List<RecipeIngredient> Ingredients { get; set; } = new();
+}
+
+public class LootEntry
+{
+    [JsonPropertyName("item_id")]
+    public string ItemId { get; set; } = "";
+
+    [JsonPropertyName("min_quantity")]
+    public int MinQuantity { get; set; } = 1;
+
+    [JsonPropertyName("max_quantity")]
+    public int MaxQuantity { get; set; } = 1;
+
+    [JsonPropertyName("drop_rate")]
+    public float DropRate { get; set; } = 1.0f;
+}
+
+public class MonsterDef
+{
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = "";
+
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
+
+    [JsonPropertyName("combat_level")]
+    public int CombatLevel { get; set; }
+
+    [JsonPropertyName("hitpoints")]
+    public int Hitpoints { get; set; }
+
+    [JsonPropertyName("max_hit")]
+    public int MaxHit { get; set; }
+
+    [JsonPropertyName("attack_speed")]
+    public float AttackSpeed { get; set; } = 2.4f;
+
+    [JsonPropertyName("xp_reward")]
+    public int XpReward { get; set; }
+
+    [JsonPropertyName("loot_table")]
+    public List<LootEntry> LootTable { get; set; } = new();
+}
+
 public class GameDatabase
 {
     [JsonPropertyName("items")]
@@ -116,8 +198,21 @@ public class GameDatabase
     [JsonPropertyName("actions")]
     public List<ActionDef> Actions { get; set; } = new();
 
+    [JsonPropertyName("recipes")]
+    public List<RecipeDef> Recipes { get; set; } = new();
+
+    [JsonPropertyName("equipment")]
+    public List<EquipmentDef> Equipment { get; set; } = new();
+
+    [JsonPropertyName("monsters")]
+    public List<MonsterDef> Monsters { get; set; } = new();
+
     public ItemDef? GetItem(string id) => Items.Find(i => i.Id == id);
     public SkillDef? GetSkill(string id) => Skills.Find(s => s.Id == id);
     public ActionDef? GetAction(string id) => Actions.Find(a => a.Id == id);
     public List<ActionDef> GetActionsForSkill(string skillId) => Actions.FindAll(a => a.Skill == skillId);
+    public RecipeDef? GetRecipe(string id) => Recipes.Find(r => r.Id == id);
+    public List<RecipeDef> GetRecipesForSkill(string skillId) => Recipes.FindAll(r => r.Skill == skillId);
+    public EquipmentDef? GetEquipment(string id) => Equipment.Find(e => e.Id == id);
+    public MonsterDef? GetMonster(string id) => Monsters.Find(m => m.Id == id);
 }

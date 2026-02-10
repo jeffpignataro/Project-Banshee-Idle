@@ -13,11 +13,35 @@
     { "id": "coal", "name": "Coal", "value": 30 },
     { "id": "mithril_ore", "name": "Mithril Ore", "value": 75 },
     { "id": "adamant_ore", "name": "Adamantite Ore", "value": 200 },
-    { "id": "rune_ore", "name": "Runite Ore", "value": 500 }
+    { "id": "rune_ore", "name": "Runite Ore", "value": 500 },
+
+    { "id": "bronze_bar", "name": "Bronze Bar", "value": 5 },
+    { "id": "iron_bar", "name": "Iron Bar", "value": 25 },
+    { "id": "steel_bar", "name": "Steel Bar", "value": 50 },
+    { "id": "mithril_bar", "name": "Mithril Bar", "value": 150 },
+    { "id": "adamant_bar", "name": "Adamantite Bar", "value": 400 },
+    { "id": "rune_bar", "name": "Runite Bar", "value": 1000 },
+
+    { "id": "arrow_shaft", "name": "Arrow Shaft", "value": 1 },
+    { "id": "bronze_arrow", "name": "Bronze Arrow", "value": 2 },
+    { "id": "iron_arrow", "name": "Iron Arrow", "value": 5 },
+    { "id": "steel_arrow", "name": "Steel Arrow", "value": 10 },
+    { "id": "mithril_arrow", "name": "Mithril Arrow", "value": 25 },
+    { "id": "adamant_arrow", "name": "Adamantite Arrow", "value": 50 },
+    { "id": "rune_arrow", "name": "Runite Arrow", "value": 100 },
+
+    { "id": "shortbow", "name": "Shortbow", "value": 10 },
+    { "id": "oak_shortbow", "name": "Oak Shortbow", "value": 20 },
+    { "id": "willow_shortbow", "name": "Willow Shortbow", "value": 40 },
+    { "id": "maple_shortbow", "name": "Maple Shortbow", "value": 80 },
+    { "id": "yew_shortbow", "name": "Yew Shortbow", "value": 200 },
+    { "id": "magic_shortbow", "name": "Magic Shortbow", "value": 500 }
   ],
   "skills": [
     { "id": "woodcutting", "name": "Woodcutting" },
-    { "id": "mining", "name": "Mining" }
+    { "id": "mining", "name": "Mining" },
+    { "id": "smithing", "name": "Smithing" },
+    { "id": "fletching", "name": "Fletching" }
   ],
   "actions": [
     { "id": "wc_tree", "skill": "woodcutting", "req_level": 1, "xp": 25, "loot": "logs", "time": 3.0 },
@@ -34,5 +58,443 @@
     { "id": "mine_mithril", "skill": "mining", "req_level": 55, "xp": 80, "loot": "mithril_ore", "time": 5.5 },
     { "id": "mine_adamant", "skill": "mining", "req_level": 70, "xp": 95, "loot": "adamant_ore", "time": 7.0 },
     { "id": "mine_rune", "skill": "mining", "req_level": 85, "xp": 125, "loot": "rune_ore", "time": 9.0 }
+  ],
+  "recipes": [
+    {
+      "id": "bronze_bar",
+      "name": "Bronze Bar",
+      "skill": "smithing",
+      "req_level": 1,
+      "xp": 12,
+      "time": 2.0,
+      "ingredients": [
+        { "item_id": "copper_ore", "quantity": 1 },
+        { "item_id": "tin_ore", "quantity": 1 }
+      ],
+      "output_item": "bronze_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "iron_bar",
+      "name": "Iron Bar",
+      "skill": "smithing",
+      "req_level": 15,
+      "xp": 25,
+      "time": 2.5,
+      "ingredients": [
+        { "item_id": "iron_ore", "quantity": 1 }
+      ],
+      "output_item": "iron_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "steel_bar",
+      "name": "Steel Bar",
+      "skill": "smithing",
+      "req_level": 30,
+      "xp": 35,
+      "time": 3.0,
+      "ingredients": [
+        { "item_id": "iron_ore", "quantity": 1 },
+        { "item_id": "coal", "quantity": 2 }
+      ],
+      "output_item": "steel_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "mithril_bar",
+      "name": "Mithril Bar",
+      "skill": "smithing",
+      "req_level": 50,
+      "xp": 50,
+      "time": 3.5,
+      "ingredients": [
+        { "item_id": "mithril_ore", "quantity": 1 },
+        { "item_id": "coal", "quantity": 4 }
+      ],
+      "output_item": "mithril_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "adamant_bar",
+      "name": "Adamantite Bar",
+      "skill": "smithing",
+      "req_level": 70,
+      "xp": 75,
+      "time": 4.0,
+      "ingredients": [
+        { "item_id": "adamant_ore", "quantity": 1 },
+        { "item_id": "coal", "quantity": 6 }
+      ],
+      "output_item": "adamant_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "rune_bar",
+      "name": "Runite Bar",
+      "skill": "smithing",
+      "req_level": 85,
+      "xp": 100,
+      "time": 5.0,
+      "ingredients": [
+        { "item_id": "rune_ore", "quantity": 1 },
+        { "item_id": "coal", "quantity": 8 }
+      ],
+      "output_item": "rune_bar",
+      "output_quantity": 1
+    },
+    {
+      "id": "bronze_sword",
+      "name": "Bronze Sword",
+      "skill": "smithing",
+      "req_level": 1,
+      "xp": 25,
+      "time": 3.0,
+      "ingredients": [
+        { "item_id": "bronze_bar", "quantity": 1 }
+      ],
+      "output_item": "bronze_sword",
+      "output_quantity": 1
+    },
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "skill": "smithing",
+      "req_level": 20,
+      "xp": 50,
+      "time": 3.5,
+      "ingredients": [
+        { "item_id": "iron_bar", "quantity": 2 }
+      ],
+      "output_item": "iron_sword",
+      "output_quantity": 1
+    },
+    {
+      "id": "steel_sword",
+      "name": "Steel Sword",
+      "skill": "smithing",
+      "req_level": 35,
+      "xp": 75,
+      "time": 4.0,
+      "ingredients": [
+        { "item_id": "steel_bar", "quantity": 2 }
+      ],
+      "output_item": "steel_sword",
+      "output_quantity": 1
+    },
+    {
+      "id": "arrow_shafts",
+      "name": "Arrow Shafts",
+      "skill": "fletching",
+      "req_level": 1,
+      "xp": 5,
+      "time": 2.0,
+      "ingredients": [
+        { "item_id": "logs", "quantity": 1 }
+      ],
+      "output_item": "arrow_shaft",
+      "output_quantity": 15
+    },
+    {
+      "id": "shortbow",
+      "name": "Shortbow",
+      "skill": "fletching",
+      "req_level": 5,
+      "xp": 10,
+      "time": 3.0,
+      "ingredients": [
+        { "item_id": "logs", "quantity": 1 }
+      ],
+      "output_item": "shortbow",
+      "output_quantity": 1
+    },
+    {
+      "id": "oak_shortbow",
+      "name": "Oak Shortbow",
+      "skill": "fletching",
+      "req_level": 20,
+      "xp": 33,
+      "time": 3.5,
+      "ingredients": [
+        { "item_id": "oak_logs", "quantity": 1 }
+      ],
+      "output_item": "oak_shortbow",
+      "output_quantity": 1
+    },
+    {
+      "id": "willow_shortbow",
+      "name": "Willow Shortbow",
+      "skill": "fletching",
+      "req_level": 35,
+      "xp": 66,
+      "time": 4.0,
+      "ingredients": [
+        { "item_id": "willow_logs", "quantity": 1 }
+      ],
+      "output_item": "willow_shortbow",
+      "output_quantity": 1
+    },
+    {
+      "id": "maple_shortbow",
+      "name": "Maple Shortbow",
+      "skill": "fletching",
+      "req_level": 50,
+      "xp": 100,
+      "time": 4.5,
+      "ingredients": [
+        { "item_id": "maple_logs", "quantity": 1 }
+      ],
+      "output_item": "maple_shortbow",
+      "output_quantity": 1
+    },
+    {
+      "id": "yew_shortbow",
+      "name": "Yew Shortbow",
+      "skill": "fletching",
+      "req_level": 65,
+      "xp": 175,
+      "time": 5.0,
+      "ingredients": [
+        { "item_id": "yew_logs", "quantity": 1 }
+      ],
+      "output_item": "yew_shortbow",
+      "output_quantity": 1
+    },
+    {
+      "id": "magic_shortbow",
+      "name": "Magic Shortbow",
+      "skill": "fletching",
+      "req_level": 80,
+      "xp": 250,
+      "time": 6.0,
+      "ingredients": [
+        { "item_id": "magic_logs", "quantity": 1 }
+      ],
+      "output_item": "magic_shortbow",
+      "output_quantity": 1
+    }
+  ],
+  "equipment": [
+    {
+      "id": "bronze_sword",
+      "name": "Bronze Sword",
+      "slot": "weapon",
+      "value": 10,
+      "stats": {
+        "attack_bonus": 4,
+        "strength_bonus": 3,
+        "defense_bonus": 0,
+        "ranged_bonus": 0
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 1
+      }
+    },
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "slot": "weapon",
+      "value": 50,
+      "stats": {
+        "attack_bonus": 10,
+        "strength_bonus": 8,
+        "defense_bonus": 0,
+        "ranged_bonus": 0
+      },
+      "requirements": {
+        "attack_level": 10,
+        "defense_level": 1,
+        "ranged_level": 1
+      }
+    },
+    {
+      "id": "steel_sword",
+      "name": "Steel Sword",
+      "slot": "weapon",
+      "value": 100,
+      "stats": {
+        "attack_bonus": 16,
+        "strength_bonus": 14,
+        "defense_bonus": 0,
+        "ranged_bonus": 0
+      },
+      "requirements": {
+        "attack_level": 20,
+        "defense_level": 1,
+        "ranged_level": 1
+      }
+    },
+    {
+      "id": "shortbow",
+      "name": "Shortbow",
+      "slot": "weapon",
+      "value": 20,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 8
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 5
+      }
+    },
+    {
+      "id": "oak_shortbow",
+      "name": "Oak Shortbow",
+      "slot": "weapon",
+      "value": 40,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 14
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 20
+      }
+    },
+    {
+      "id": "willow_shortbow",
+      "name": "Willow Shortbow",
+      "slot": "weapon",
+      "value": 80,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 20
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 35
+      }
+    },
+    {
+      "id": "maple_shortbow",
+      "name": "Maple Shortbow",
+      "slot": "weapon",
+      "value": 160,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 29
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 50
+      }
+    },
+    {
+      "id": "yew_shortbow",
+      "name": "Yew Shortbow",
+      "slot": "weapon",
+      "value": 400,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 38
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 65
+      }
+    },
+    {
+      "id": "magic_shortbow",
+      "name": "Magic Shortbow",
+      "slot": "weapon",
+      "value": 1000,
+      "stats": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defense_bonus": 0,
+        "ranged_bonus": 49
+      },
+      "requirements": {
+        "attack_level": 1,
+        "defense_level": 1,
+        "ranged_level": 80
+      }
+    }
+  ],
+  "monsters": [
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "combat_level": 2,
+      "hitpoints": 5,
+      "max_hit": 1,
+      "attack_speed": 3.0,
+      "xp_reward": 20,
+      "loot_table": [
+        { "item_id": "bronze_sword", "min_quantity": 1, "max_quantity": 1, "drop_rate": 0.1 },
+        { "item_id": "logs", "min_quantity": 1, "max_quantity": 3, "drop_rate": 0.3 }
+      ]
+    },
+    {
+      "id": "rat",
+      "name": "Giant Rat",
+      "combat_level": 3,
+      "hitpoints": 8,
+      "max_hit": 2,
+      "attack_speed": 2.8,
+      "xp_reward": 30,
+      "loot_table": [
+        { "item_id": "copper_ore", "min_quantity": 1, "max_quantity": 2, "drop_rate": 0.4 }
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "combat_level": 10,
+      "hitpoints": 20,
+      "max_hit": 4,
+      "attack_speed": 2.5,
+      "xp_reward": 80,
+      "loot_table": [
+        { "item_id": "iron_sword", "min_quantity": 1, "max_quantity": 1, "drop_rate": 0.05 },
+        { "item_id": "iron_ore", "min_quantity": 1, "max_quantity": 2, "drop_rate": 0.2 }
+      ]
+    },
+    {
+      "id": "orc",
+      "name": "Orc Warrior",
+      "combat_level": 20,
+      "hitpoints": 50,
+      "max_hit": 8,
+      "attack_speed": 2.4,
+      "xp_reward": 200,
+      "loot_table": [
+        { "item_id": "steel_sword", "min_quantity": 1, "max_quantity": 1, "drop_rate": 0.03 },
+        { "item_id": "steel_bar", "min_quantity": 1, "max_quantity": 2, "drop_rate": 0.15 },
+        { "item_id": "coal", "min_quantity": 2, "max_quantity": 5, "drop_rate": 0.3 }
+      ]
+    },
+    {
+      "id": "dragon",
+      "name": "Lesser Dragon",
+      "combat_level": 50,
+      "hitpoints": 150,
+      "max_hit": 15,
+      "attack_speed": 2.0,
+      "xp_reward": 800,
+      "loot_table": [
+        { "item_id": "rune_bar", "min_quantity": 1, "max_quantity": 1, "drop_rate": 0.05 },
+        { "item_id": "adamant_ore", "min_quantity": 2, "max_quantity": 5, "drop_rate": 0.25 },
+        { "item_id": "magic_logs", "min_quantity": 3, "max_quantity": 10, "drop_rate": 0.4 }
+      ]
+    }
   ]
 }

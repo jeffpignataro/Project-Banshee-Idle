@@ -40,8 +40,24 @@ text = "Woodcutting"
 layout_mode = 2
 text = "Mining"
 
+[node name="SmithingBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Smithing"
+
+[node name="FletchingBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Fletching"
+
+[node name="CombatBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Combat"
+
 [node name="Separator2" type="HSeparator" parent="HBoxContainer/Sidebar"]
 layout_mode = 2
+
+[node name="EquipmentBtn" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Equipment"
 
 [node name="InventoryBtn" type="Button" parent="HBoxContainer/Sidebar"]
 layout_mode = 2
